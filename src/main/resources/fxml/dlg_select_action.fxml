@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="361.0" prefWidth="600.0" style="-fx-padding: 10px; -fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.ebi.pride.spectracluster.spectraclustergui.controller.DlgSelectActionController">
+   <children>
+      <VBox prefHeight="313.0" prefWidth="600.0" style="-fx-background-color: #FFFFFF;" VBox.vgrow="ALWAYS">
+         <children>
+            <Label style="-fx-padding: 0px 0px 10px 0px;" text="Select actioin:" />
+            <RadioButton fx:id="radioClusterNew" mnemonicParsing="false" selected="true" style="-fx-padding: 0px 0px 10px 10px;" text="Cluster new dataset (MGF files)">
+               <toggleGroup>
+                  <ToggleGroup fx:id="RadioAction" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioClusterIncremental" disable="true" mnemonicParsing="false" style="-fx-padding: 0px 0px 10px 10px;" text="Incrementally cluster dataset (MGF and .clustering files)" toggleGroup="$RadioAction" />
+            <RadioButton fx:id="radioContinueClustering" disable="true" mnemonicParsing="false" style="-fx-padding: 0px 0px 10px 10px;" text="Continue clustering process (binary .cls files)" toggleGroup="$RadioAction" />
+         </children>
+      </VBox>
+      <Label lineSpacing="1.5" minHeight="65.0" prefHeight="65.0" prefWidth="580.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #888888; -fx-padding: 5px;" text="The spectra-cluster-gui allows you to cluster MS/MS proteomics data using the spectra-cluster algorihtm (Griss et al. (2016. Nat. Meth)" wrapText="true">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Separator prefWidth="200.0" />
+      <HBox alignment="BOTTOM_RIGHT" maxHeight="32.0" minHeight="32.0" prefHeight="32.0" prefWidth="580.0" style="-fx-background-color: #FFFFFF;" VBox.vgrow="NEVER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleNextAction" text="Next &gt;" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
